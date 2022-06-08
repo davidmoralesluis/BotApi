@@ -75,7 +75,7 @@ public class DriveQuickstart {
                 .setAccessType("offline")
                 .build();
         LocalServerReceiver receiver = new LocalServerReceiver.Builder().setPort(8888).build();
-        Credential credential = new AuthorizationCodeInstalledApp(flow, receiver).authorize("857727293732-brg7pnj3mjc6d932a7ek3gnud9ergvfk.apps.googleusercontent.com");
+        Credential credential = new AuthorizationCodeInstalledApp(flow, receiver).authorize("746742879717-ddncto68etnk8nj4436npubq11sa95dp.apps.googleusercontent.com");
         //returns an authorized Credential object.
         return credential;
     }
@@ -115,7 +115,7 @@ public class DriveQuickstart {
             for (File file : filesImagenes) {
                 System.out.printf("Imagen: %s\n", file.getName());
                 // guardamos el 'stream' en el fichero aux.jpeg qieune qe existir
-                OutputStream outputStream = new FileOutputStream("/Users/davidmoralesluis/Documents/VisualStudioCode/BotApi/src/main/img/aux.jpeg");
+                OutputStream outputStream = new FileOutputStream("/home/dam1/IdeaProjects/BotApi/src/main/img/aux.jpeg");
                 service.files().get(file.getId())
                         .executeMediaAndDownloadTo(outputStream);
                 outputStream.flush();
